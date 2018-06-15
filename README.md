@@ -4,7 +4,7 @@ Setup a [buildkite](https://buildkite.com) agent on linux.
 ## Setup
 1. `git clone https://github.com/lukeaus/buildkite-agent-server-setup.git`
 
-2. edit 'VARIABLES' section at top of buildkite-agent-script.sh with your github and buildkite details
+2. edit 'VARIABLES' section at top of `buildkite-agent-server-setup.sh` with your github and buildkite details
 
 3. Create your pipeline on buildkite.
 Use BUILDKITE_CLEAN_CHECKOUT=true in the Environment Variables for the job. Docker builds can leave behind files owned by another user. By default, Docker runs every process as root so if you mount the build directory as a Docker volume and generate files in your build they will be owned by root and the agent will be unable to remove them.
